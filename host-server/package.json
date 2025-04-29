@@ -1,0 +1,34 @@
+{
+  "name": "react-express-webpack-app",
+  "version": "1.0.0",
+  "description": "A sample React application with an Express backend, built using Webpack.",
+  "main": "src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "dependencies": {
+    "@module-federation/enhanced": "^0.13.1",
+    "axios": "^1.9.0",
+    "css-loader": "^7.1.2",
+    "express": "^4.21.2",
+    "html-webpack-plugin": "^5.6.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^4.0.0"
+  },
+  
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "@babel/preset-react": "^7.14.0",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
