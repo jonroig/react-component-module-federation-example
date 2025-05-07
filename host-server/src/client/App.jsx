@@ -15,9 +15,19 @@ init({
 });
 
 const RemoteMyComponent = React.lazy(() =>
-    loadRemote('my_component/MyComponent').then((module) => ({
-      default: module.default, // Ensure the remote component has a default export
-    }))
+    // loadRemote('my_component/MyComponent').then((module) => ({
+    //   default: module.default, // Ensure the remote component has a default export
+    // }))
+    loadRemote('my_component/MyComponent').then((module) => {
+      console.log('remote', module);
+      // Check if the module has a default export
+      if (!module.default) {
+        throw new Error('Remote module does not have a default export');
+      }
+      return {
+        default: module.default, // Ensure the remote component has a default export
+      };
+    })
   );
 
 const App = () => {
